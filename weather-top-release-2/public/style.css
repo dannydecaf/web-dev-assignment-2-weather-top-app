@@ -1,0 +1,15 @@
+.content {
+    color: aliceblue;
+}
+
+#weatherhome {
+    width: 450px;
+    height: 350px;;
+}
+
+
+.weatherlogin {
+    display: block;
+    margin-left: 35%;
+}
+

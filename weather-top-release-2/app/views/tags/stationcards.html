@@ -1,0 +1,69 @@
+<div class="ui five inverted stackable cards">
+    <div class="card">
+        <div class="content">
+            <h4>${_station.name}</h4>
+            <i class="big purple right floated map marker alternate icon"></i>
+            <br/><br/><br/>
+            Latitude: ${_station.latitude}<br/>
+            <br/>
+            Longitude: ${_station.longitude}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Weather</h4>
+            #{if _reading}
+            <i class="big red right floated ${_reading.weatherIcon}"></i>
+            <br/><br/><br/>
+            ${_reading.weather}
+            #{/if}
+            #{else}
+            <i class="big red flight floated question icon"></i>
+            #{/else}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Temp</h4>
+            <i class="big blue right floated temperature low icon"></i>
+            #{if _reading}
+            <br><br/><br/>
+            ${_reading.temp} C<br/>
+            ${_reading.tempFahr} F <br/><br/><br/><br/>
+            Min Temperature: ${_reading.minTempReading} <br/>
+            Max Temperature: ${_reading.maxTempReading} <br/>
+            #{/if}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Wind</h4>
+            <i class="big green right floated wind icon"></i>
+            #{if _reading}
+            <br>
+            ${_reading.beufortSpeed} bft <br/>
+            <br>
+            ${_reading.windDirectionText} <br/>
+            <br>
+            Feels like ${_reading.windChill} <br/>
+            <br/><br/>
+            Min Wind Speed ${_reading.minWindSpeedReading} <br/>
+            Max Wind Speed ${_reading.maxWindSpeedReading} <br/>
+            #{/if}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Pressure</h4>
+            <i class="big orange right floated tachometer alternate icon"></i>
+            #{if _reading}
+            <br/><br/><br/>
+            ${_reading.pressure} hPa <br/><br/><br/><br/><br/>
+            Min Pressure ${_reading.minPressureReading} <br/>
+            Max Pressure ${_reading.maxPressureReading} <br/>
+            #{/if}
+        </div>
+    </div>
+</div>
+
+

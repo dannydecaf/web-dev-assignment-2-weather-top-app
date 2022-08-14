@@ -1,0 +1,50 @@
+<div class="ui five inverted stackable cards">
+    <div class="card">
+        <div class="content">
+            <h4>${_station.name}</h4>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Weather</h4>
+            #{if _reading}
+            <br/>
+            ${_reading.weather}
+            #{/if}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Temp</h4>
+            #{if _reading}
+            <br>
+            ${_reading.temp}<br/>
+            ${_reading.tempFahr} F
+            #{/if}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Wind</h4>
+            #{if _reading}
+            <br>
+            ${_reading.beufortSpeed} bft
+            <br>
+            ${_reading.windDirectionText}
+            <br>
+            Feels like
+            <br>
+            ${_reading.windChill}
+            #{/if}
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h4>Pressure</h4>
+            #{if _reading}
+            <br/>
+            ${_reading.pressure} hPa
+            #{/if}
+        </div>
+    </div>
+</div>
